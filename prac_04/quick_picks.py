@@ -14,6 +14,5 @@ for i in range(num_picks):
         while picks[i][n] in picks[i][:n]:
             picks[i][n] = random.randint(MIN_NUM, MAX_NUM)
     picks[i].sort()
+    print(" ".join("{}".format(pick) for pick in picks[i]))
 
-for i in range(num_picks):
-    print(picks[i])
