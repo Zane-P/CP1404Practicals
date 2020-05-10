@@ -14,6 +14,7 @@ while menu_choice != 'q':
         taxi_choice = int(input("Choose taxi: "))
         current_taxi = taxis[taxi_choice]
     if menu_choice == 'd' and current_taxi is not None:
+        current_taxi.start_fare()
         distance = float(input("Drive how far? "))
         current_taxi.drive(distance)
         print("Your {} trip cost you ${:.2f}".format(current_taxi.name, current_taxi.get_fare()))
