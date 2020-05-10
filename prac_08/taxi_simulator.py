@@ -20,3 +20,7 @@ while menu_choice != 'q':
         total_bill += current_taxi.get_fare()
     print("Bill to date: ${:.2f}".format(total_bill))
     menu_choice = input("q)uit, c)hoose taxi, d)rive \n>>> ").lower()
+   
+print("Total trip cost: ${:.2f}".format(total_bill))
+print("Taxis are now:")
+[print(i, ' - ', taxi) for i, taxi in enumerate(taxis)]
